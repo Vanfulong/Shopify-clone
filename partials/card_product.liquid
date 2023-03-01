@@ -1,0 +1,13 @@
+<ul>
+  <li>{{ product.id }}</li>
+  <li>{{ product.name | upcase }}</li>
+  <li>{{ product.description }}</li>
+  <li>{{ product.price | money }}</li>
+  <li>
+    {% if product.quantity > 0 %}
+      Số lượng còn {{ product.quantity }} sản phẩm
+    {% else %}
+      Hết hàng !
+    {% endif %}
+  </li>
+</ul>
